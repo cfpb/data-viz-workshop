@@ -1,0 +1,20 @@
+---
+layout: default
+title: {{ site.name }}
+---
+
+<div id="home">
+  <h1>Blog Posts</h1>
+  <ul class="posts">
+    {% for post in site.posts %}
+      <li><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></li>
+    {% endfor %}
+  </ul>
+
+  <h1>Lessons</h1>
+  <ul class="posts">
+    {% for page in site.pages %}
+        <li><a href="{{ site.baseurl }}{{ page.url }}">{{ page.title }}</a></li>
+    {% endfor %}
+  </ul>
+</div>
