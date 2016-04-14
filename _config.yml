@@ -1,0 +1,17 @@
+# Setup
+title:        CFPB Data Visualization Workshop
+tagline:      A workshop for creating interactive data visualizations with CFPB's consumer complaint data set
+baseurl:      "/data-viz-workshop"
+paginate:     1
+
+# About/contact
+author:
+  name:       CFPB
+  url:        https://cfpb.github.io
+
+# Gems
+gems:
+  - jekyll-paginate
+
+#Others
+markdown: redcarpet
