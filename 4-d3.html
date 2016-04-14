@@ -7,9 +7,7 @@ title:  "Creating a Bar Chart with d3.js"
 <h3>Set up D3</h3>
 
 {% highlight javascript %}
-<script type="text/javascript">
-  d3.select('#data').append('p').text('I\'ve been appended!');
-</script>
+d3.select('#data').append('p').text('I\'ve been appended!');
 {% endhighlight %}
 
 <img src="../images/set-up.png" alt="D3 appending a paragraph">
@@ -17,8 +15,8 @@ title:  "Creating a Bar Chart with d3.js"
 
 
 <h3>Binding Data</h3>
+
 {% highlight javascript %}
-<script type="text/javascript">
 var dataset = [1, 2, 3];
 
 d3.select('#data').selectAll('p')
@@ -26,11 +24,20 @@ d3.select('#data').selectAll('p')
     .enter()
     .append('p')
     .text('I\'ve been appended!');
-</script>
 {% endhighlight %}
 
 <img src="../images/bind-data.png" alt="D3 appending multiple paragraphs">
 
+<h3>Creating a Bar Chart</h3>
 
-[jekyll-gh]: https://github.com/mojombo/jekyll
-[jekyll]:    http://jekyllrb.com
+{% highlight javascript %}
+d3.select("#data").selectAll("div")
+  .data(complaintdata)
+  .enter()
+  .append("div")
+  .attr("class", "bar")
+  .style("height", function(d) {
+      var barHeight = d * 5;
+      return barHeight + "px";
+  });
+{% endhighlight %}
