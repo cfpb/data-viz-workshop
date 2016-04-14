@@ -1,7 +1,6 @@
 ---
-layout: default
-title:  "Welcome to Jekyll!"
-categories: main
+layout: lesson
+title:  "Intro to Government Data"
 ---
 
 You'll find this post in your `_posts` directory - edit this post and re-build (or run with the `-w` switch) to see your changes!
