@@ -103,7 +103,7 @@ xhr.send(null);
     <h3>Handling the response</h3>
     <p>We know we're getting data back! Now what?</p>
     <pre><code contenteditable class="javascript">
-xhr.onreadystatechange = function () {
+xhr.onreadystatechange = function() {
 var DONE = 4; // readyState 4 means the request is done.
 var OK = 200; // status 200 is a successful return.
 if (xhr.readyState === DONE) {
