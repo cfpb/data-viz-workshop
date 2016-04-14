@@ -3,20 +3,34 @@ layout: lesson
 title:  "Creating a Bar Chart with d3.js"
 ---
 
-You'll find this post in your `_posts` directory - edit this post and re-build (or run with the `-w` switch) to see your changes!
-To add new posts, simply add a file in the `_posts` directory that follows the convention: YYYY-MM-DD-name-of-post.ext.
 
-Jekyll also offers powerful support for code snippets:
+<h3>Set up D3</h3>
 
-{% highlight ruby %}
-def print_hi(name)
-  puts "Hi, #{name}"
-end
-print_hi('Tom')
-#=> prints 'Hi, Tom' to STDOUT.
+{% highlight javascript %}
+<script type="text/javascript">
+  d3.select('#data').append('p').text('I\'ve been appended!');
+</script>
 {% endhighlight %}
 
-Check out the [Jekyll docs][jekyll] for more info on how to get the most out of Jekyll. File all bugs/feature requests at [Jekyll's GitHub repo][jekyll-gh].
+<img src="../images/set-up.png" alt="D3 appending a paragraph">
+
+
+
+<h3>Binding Data</h3>
+{% highlight javascript %}
+<script type="text/javascript">
+var dataset = [1, 2, 3];
+
+d3.select('#data').selectAll('p')
+    .data(dataset)
+    .enter()
+    .append('p')
+    .text('I\'ve been appended!');
+</script>
+{% endhighlight %}
+
+<img src="../images/bind-data.png" alt="D3 appending multiple paragraphs">
+
 
 [jekyll-gh]: https://github.com/mojombo/jekyll
 [jekyll]:    http://jekyllrb.com
