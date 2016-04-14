@@ -232,14 +232,14 @@ console.log('Error: ' + err.status);
 var onSuccess = function(response) {
 console.log(response);
 };
-xhr.onreadystatechange = function () {
-if (xhr.readyState === 4) {
-if (xhr.status === 200) {
-onSuccess(xhr.responseText);
-} else {
-console.log('Error: ' + xhr.status);
-}
-}
+xhr.onreadystatechange = function() {
+  if (xhr.readyState === 4) {
+    if (xhr.status === 200) {
+      onSuccess(xhr.responseText);
+    } else {
+      console.log('Error: ' + xhr.status);
+    }
+  }
 };
     </code></pre>
     <p class="fragment">Now try to log the name of the returned user.</p>
