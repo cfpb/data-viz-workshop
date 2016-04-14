@@ -19,6 +19,8 @@ Serve the Jekyll site
 $ bundle exec jekyll serve --watch --baseurl ''
 ```
 
+Open it in the browser at [http://localhost:4000](http://localhost:4000)
+
 For more details read about [Jekyll][1] on its web page.
 
 # Setup

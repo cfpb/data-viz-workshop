@@ -1,7 +1,6 @@
 # Setup
 title:        CFPB Data Visualization Workshop
 tagline:      A workshop for creating interactive data visualizations with CFPB's consumer complaint data set
-source:       _lessons
 baseurl:      "/data-viz-workshop"
 paginate:     1
 
