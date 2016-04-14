@@ -49,8 +49,8 @@ var onSuccess = function(response) {
 
   // exercise 1
   var complaints = response && JSON.parse(response);
-  console.log(complaints[0]);
-
+  // console.log(complaints[0]);
+  console.log(complaints.length);
   // exercise 1
   for (var i = 0; i < complaints.length; i++) {
     // console.log(complaints[i]);
