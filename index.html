@@ -14,9 +14,7 @@ title: {{ site.name }}
   <h1>Lessons</h1>
   <ul class="posts">
     {% for page in site.pages %}
-        {% if page.layout == 'lesson' %}
         <li><a href="{{ site.baseurl }}{{ page.url }}">{{ page.title }}</a></li>
-        {% endif %}
     {% endfor %}
   </ul>
 </div>
