@@ -16,3 +16,4 @@ gems:
 #Others
 markdown: redcarpet
 permalink: /:title/
+relative_permalinks: false
