@@ -19,7 +19,7 @@ Serve the Jekyll site
 $ bundle exec jekyll serve --watch --baseurl ''
 ```
 
-Open it in the browser at [http://localhost:4000](http://localhost:4000)
+Open it in the browser at [http://localhost:4000/data-viz-workshop/](http://localhost:4000/data-viz-workshop/)
 
 For more details read about [Jekyll][1] on its web page.
 
