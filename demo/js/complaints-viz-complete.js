@@ -70,6 +70,7 @@ var onSuccess = function(response) {
 var makeChart = function(url) {
   console.log(complaintdata, url);
   if (i >= 4) {
+  var complaintCount = complaintdata[i];
   d3.select("#data").selectAll("div")
     .data(complaintdata)
     .enter()

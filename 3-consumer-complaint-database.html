@@ -9,14 +9,17 @@ title:  "Civic Hacking with the Consumer Complaint Database API"
     <p><a target="_blank" href="https://technet.microsoft.com/en-us/library/cc732612(v=ws.10).aspx">Windows IIS</a></p>
     <p><a target="_blank" href="https://developer.mozilla.org/en-US/Learn/Common_questions/Set_up_a_basic_working_environment">Very detailed (Apache)</a></p>
     <p><a target="_blank" href="https://gist.github.com/willurd/5720255">Long list of simple-setup servers</a></p>
-    <p class="left-align">Let's take no more than <em>10 minutes</em> to try and get this set up, but again, we can use codepen, so don't worry if you can't get a dev server up and running.</p>
+    <p class="left-align">Let's take no more than <em>10 minutes</em> to try and get this set up, but again,
+    we can use [CodePen](http://codepen.io), so don't worry if you can't get a dev server up and running.</p>
 </section>
 
 <!-- AJAX -->
 <section>
-    <h3>AJAX:<br />Asynchronous&nbsp;JavaScript And&nbsp;XML</h3>
-    <p class="left-align">Normally, the rendering of a web page is a relatively sequential process. File top to bottom.</p>
-    <p class="left-align fragment">With AJAX, we use javascript to request additional data outside the normal page-load process, often long after the initial load is complete.</p>
+    <h3>AJAX: Asynchronous JavaScript And XML</h3>
+    <p class="left-align">Normally,
+    the rendering of a web page is a relatively sequential process from the top of the file to the bottom.</p>
+    <p class="left-align fragment">With AJAX, we use JavaScript to request additional data outside the normal page-load process,
+    often long after the initial load is complete.</p>
 </section>
 <section>
     <h3>AJAX: Where is it used?</h3>
@@ -26,11 +29,13 @@ title:  "Civic Hacking with the Consumer Complaint Database API"
         <li>Product quickview</li>
         <li>Auto-complete or auto-suggested results</li>
         <li>Requests to APIs</li>
-        <li>Multi-page forms, loading search results, and anywhere a large or dynamically-generated set of new information appears without a page load</li>
+        <li>Multi-page forms, loading search results,
+        and anywhere a large or dynamically-generated set of new information appears without a page load</li>
     </ul>
 </section>
 <section>
     <h3>Synchronous vs Asynchronous</h3>
+    <p></p>These are the main differences between synchronous and asynchronous processes:</p>
     <div class="left" style="width: 47%; margin-right: 6%;">
         <strong class="red">Synchronous</strong>
         <ul>
@@ -52,16 +57,19 @@ title:  "Civic Hacking with the Consumer Complaint Database API"
 </section>
 <section>
     <h3>What do these gaps look like?</h3>
-    <p class="left-align">When you submit a purchase and the page tells you not to refresh or hit the back button. Then it takes you to the confirmation page.</p>
+    <p class="left-align">When you submit a purchase and the page tells you not to refresh or hit the back button.
+    Then it takes you to the confirmation page.</p>
 </section>
 <section>
     <h3>XML: Extensible Markup Language</h3>
-    <p class="left-align">XML is a markup language and file format used to store and transmit data. It is extremely flexible: HTML is a subset of XML.</p>
+    <p class="left-align">XML is a markup language and file format used to store and transmit data.
+    It is extremely flexible: XHTML is a subset of XML.</p>
     <img src="img/xml.png" alt="sample of XML" />
 </section>
 <section>
     <h3>AJAX and XML</h3>
-    <p class="left-align">AJAX was originally developed for use with XML, but you can use it to request many different things. Most often JSON or HTML.</p>
+    <p class="left-align">AJAX was originally developed for use with XML, but you can use it to request many different things.
+    Most often JSON or HTML.</p>
 </section>
 <section>
     <h3>JSON: JavaScript Object Notation</h3>
@@ -75,16 +83,17 @@ var xhr = new XMLHttpRequest();
 xhr.open('GET', 'http://jsonplaceholder.typicode.com/users/2/');
     </code></pre>
     <ol>
-        <li>create the request object</li>
-        <li>set some details of the request, like the type of request (GET) and the url to ask for</li>
+        <li>Create the request object</li>
+        <li>Set some details of the request, like the type of request (GET) and the URL to ask for</li>
     </ol>
     <pre><code contenteditable class="javascript">
 xhr.send(null);
     </code></pre>
     <ol start="3" style="width: 100%">
-        <li>send the request</li>
+        <li>Send the request</li>
     </ol>
-    <p class="fragment"><br />Check your "Resources" panel to see if it worked.</p>
+    <p class="fragment"><br />Open the page in Google Chrome or another web browser that has Developer Tools
+    and check the "Resources" panel in the Chrome Developer Tools to see if it worked.</p>
 </section>
 <section>
     <h2>Wooo!</h2>
@@ -94,7 +103,7 @@ xhr.send(null);
     <h3>Handling the response</h3>
     <p>We know we're getting data back! Now what?</p>
     <pre><code contenteditable class="javascript">
-xhr.onreadystatechange = function () {
+xhr.onreadystatechange = function() {
 var DONE = 4; // readyState 4 means the request is done.
 var OK = 200; // status 200 is a successful return.
 if (xhr.readyState === DONE) {
@@ -223,14 +232,14 @@ console.log('Error: ' + err.status);
 var onSuccess = function(response) {
 console.log(response);
 };
-xhr.onreadystatechange = function () {
-if (xhr.readyState === 4) {
-if (xhr.status === 200) {
-onSuccess(xhr.responseText);
-} else {
-console.log('Error: ' + xhr.status);
-}
-}
+xhr.onreadystatechange = function() {
+  if (xhr.readyState === 4) {
+    if (xhr.status === 200) {
+      onSuccess(xhr.responseText);
+    } else {
+      console.log('Error: ' + xhr.status);
+    }
+  }
 };
     </code></pre>
     <p class="fragment">Now try to log the name of the returned user.</p>
